@@ -1,7 +1,6 @@
 import './App.css';
 import Quote from './Quote';
 import Generator from './Generator';
-import { useEffect } from 'react';
 import axios from 'axios';
 function App() {
   const obj = {
@@ -20,7 +19,7 @@ function App() {
     <div className="app">
       <Quote></Quote>
       <Generator></Generator>
-      <button onClick={handleClick}>Click me</button>
+      <button className='btn' onClick={handleClick}>Click me</button>
     </div>
   );
 }
