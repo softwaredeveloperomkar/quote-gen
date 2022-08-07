@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+
 function App() {
-  const [quote, setQuote] = useState("omkar is great");
+  const [quote, setQuote] = useState("Click on New Quote..");
   
   const handleClick = async() =>{
     try {
@@ -13,9 +15,11 @@ function App() {
     }
   }
   return (
-    <div className="app">
-      <div className="">{quote}</div>
-      <button className='btn' onClick={handleClick}>Click me</button>
+    <div className='card'>
+      <div className='quote'>{quote}</div>
+      {/* <div className='btn'> */}
+        <Button variant="contained" color="error" onClick={handleClick}>New Quote</Button>
+      {/* </div> */}
     </div>
   );
 }
